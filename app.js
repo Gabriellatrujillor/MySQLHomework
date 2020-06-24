@@ -1,6 +1,8 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 
+const cTable = require('console.table');
+
 // create the connection information for the sql database
 var connection = mysql.createConnection({
   host: "localhost",
@@ -13,7 +15,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "Inuyasha!34!",
-  database: "greatBay_DB"
+  database: "tracker_DB"
 });
 
 // connect to the mysql server and sql database
@@ -22,6 +24,20 @@ connection.connect(function(err) {
   // run the start function after the connection is made to prompt the user
   start();
 });
+
+function viewDepartment(){}
+
+function viewRole(){}
+
+function viewEmployee(){}
+
+function addDepartment(){}
+
+function addRole(){}
+
+function addEmployee(){}
+
+function updateRole(){}
 
 // function which prompts the user for what action they should take
 function start() {
