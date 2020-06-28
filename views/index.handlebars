@@ -1,0 +1,39 @@
+<h1>Welcome to Britt's Burgers!</h1>
+
+
+<h2>Burgers Devoured</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burgers not Devoured</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{>burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Order another burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="bn">Burger Name:</label>
+        <input type="text" id="bn" name="burgerName">
+    </div>
+
+    <div class="form-group">
+        <label for="devoured">Devoured?</label><br>
+        <input type="radio" name="devoured" value="0" checked>
+        <input type="radio" name="devoured" value="1">Devoured
+    </div>
+
+    <button type="submit">Order Burger</button>
+</form>
