@@ -1,0 +1,15 @@
+/* to style, change-devoured and delete-burger in partial  */
+
+.change-devoured{
+background-color: yellow;
+}
+
+.delete-burger{
+background-color: red;
+}
+
+body{
+
+    background-image: url("../img/Three_Broomsticks_Inn_Pottermore.png");
+    background-color: black;
+}
